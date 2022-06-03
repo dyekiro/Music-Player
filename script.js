@@ -14,6 +14,8 @@ const musicCurrentTime = document.getElementById("current-time");
 const muteBtn = document.getElementById("mute");
 const shuffleBtn = document.getElementById("shuffle");
 
+const mainContainer = document.getElementById("main-container");
+
 const songList = [
   {
     name: "Yoasobi-1",
@@ -48,9 +50,25 @@ const toggleIcon = (isPause) => {
   playBtn.setAttribute("title", toggleTitle);
 };
 
+const setBG = () => {
+  mainContainer.style.background = 'url("./dancy.gif")';
+  mainContainer.style.backgroundSize = "auto";
+  mainContainer.style.backgroundPosition = "right bottom";
+  mainContainer.style.backgroundRepeat = "no-repeat";
+};
+const setSmallBG = () => {
+  setBG();
+  mainContainer.style.backgroundPosition = "center top";
+};
+
 const togglePlay = () => {
   isPause = music.paused;
   isPause ? music.play() : music.pause();
+  if (window.innerWidth > 450) {
+    isPause ? setBG() : (mainContainer.style.background = "#50cccd");
+  } else {
+    isPause ? setSmallBG() : (mainContainer.style.background = "#50cccd");
+  }
   toggleIcon(music.paused);
 };
 

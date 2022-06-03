@@ -1,0 +1,164 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #c9ced3;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 12px;
+  background-color: #50cccd;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: url("./dance.gif"); */
+  /* background: url("./dance-1.gif"); */
+  /* background: url("./dance-2.gif"); */
+  background: url("./dancy.gif");
+  /* background: url("./dances.gif"); */
+  /* background: url("./dance-5.gif"); */
+  /* background: url("./dance-3.gif"); */
+  background-size: auto;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.player-container {
+  height: 500px;
+  width: 400px;
+  background: #dddddd;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px 5px rgb(0 0 0 / 30%);
+}
+
+.img-container {
+  position: relative;
+  top: -50px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 5px 30px 5px rgb(0 0 0 / 50%);
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  /* change this to show progress */
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 60px;
+  width: 320px;
+}
+
+.fa-volume-down {
+  width: 30px;
+}
+
+.fas {
+  font-size: 30px;
+  color: rgb(129, 129, 129);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fas:hover {
+  filter: brightness(60%);
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 450px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background: #50cccd;
+    background: url("./dancy.gif");
+    /* background: url("./dances.gif"); */
+    /* background: url("./dance-5.gif"); */
+    /* background: url("./dance-3.gif"); */
+    background-size: auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  .player-container {
+    width: 95vw;
+  }
+
+  .img-container {
+    left: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 35px;
+  }
+}
